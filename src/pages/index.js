@@ -1,12 +1,15 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import hero from './hero.svg';
 import Container from '../components/Container';
 import Box from '../components/Box';
 import Text from '../components/Text';
 import BackgroundImage from '../components/BackgroundImage';
 import Button from '../components/Button';
+import Icontext from '../components/Icontext';
+
+import hero from '../images/hero.svg';
+import legend from '../text/legend';
 
 const Index = () => (
   <Container>
@@ -34,7 +37,6 @@ const Index = () => (
       p="0.5em"
       my="1em"
     >
-      老闆真的很強耶
     </Box>
   </Container>
 );
