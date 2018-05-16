@@ -4,40 +4,37 @@ import Link from 'gatsby-link';
 import Container from '../components/Container';
 import Box from '../components/Box';
 import Text from '../components/Text';
-import BackgroundImage from '../components/BackgroundImage';
+import Hero from '../components/Hero';
+import Maze from '../components/Maze';
 import Button from '../components/Button';
 import Icontext from '../components/Icontext';
+import Flex from '../components/Flex';
 
-import hero from '../images/hero.svg';
 import legend from '../text/legend';
 
 const Index = () => (
   <Container>
-    <Box align="center" mx="3em">
-      <BackgroundImage mt="1em" src={hero} ratio={253.81 / 489.11} />
-      <Box
-        border="2px solid black"
-        borderRadius="50px"
-        fontWeight="700"
-        bg="teal"
-        color="white"
-        p="0.5em"
-        f="2em"
-        mt="-0.9em"
-        position="relative"
-      >
-        一網打盡 能源大地圖
-      </Box>
-    </Box>
-    <Box
+    <Hero />
+    <Flex
       border="2px solid"
       borderRadius="8px"
       fontWeight="700"
       color="black"
-      p="0.5em"
-      my="1em"
+      mx="2.5em"
+      my="1.5em"
+      px="3em"
+      justify="center"
+      align="center"
     >
-    </Box>
+      {legend.map((key, index) =>
+        <Box w={1/3} align="center" py="1em">
+          <Icontext px="3.5em" src={key.src} />
+          <Text>{key.text}</Text>
+        </Box>
+      )
+    }
+    </Flex>
+    <Maze />
   </Container>
 );
 

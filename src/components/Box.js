@@ -17,12 +17,17 @@ import {
   fontWeight,
   maxWidth,
   borderRadius,
+  borderRight,
+  borderBottom,
   border,
   zIndex,
+  flex,
+  flexBasis,
 } from 'styled-system';
 
 import blacklist from './utils/blacklist';
 import injectProps from './utils/injectProps';
+import { borderLeft } from 'styled-system/dist/styles';
 
 const Box = styled(tag)`
   ${space}
@@ -38,6 +43,11 @@ const Box = styled(tag)`
   ${left}
   ${right}
   ${border}
+  ${borderRight}
+  ${borderLeft}
+  ${borderBottom}
+  ${flex}
+  ${flexBasis}
   ${maxWidth}
   ${bottom}
   ${fontWeight}
