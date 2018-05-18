@@ -11,12 +11,14 @@ const font = 'Arial, "PingFang TC", "HeiTi TC", "Microsoft JhengHei", sans-serif
 const white = '#fff';
 const black = '#000';
 const teal = '#27C1AE';
+const gray = '#CCCCCC';
 
 export default merge(constants, {
   colors: {
     white,
     black,
     teal,
+    gray,
     primary: teal,
     secondary: 'orange',
   },

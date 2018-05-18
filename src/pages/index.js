@@ -28,7 +28,7 @@ const Index = () => (
     >
       {legend.map((key, index) =>
         <Box w={1/3} align="center" py="1em">
-          <Icontext px="3.5em" src={key.src} />
+          <Icontext px="30%" src={key.src} />
           <Text>{key.text}</Text>
         </Box>
       )

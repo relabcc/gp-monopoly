@@ -7,6 +7,6 @@ import Box from '../Box';
 
 export default (props) => (
   <ThemeProvider theme={theme}>
-    <Box f={[14, null, 16]} {...props} />
+    <Box f={[10, 14, 16]} {...props} />
   </ThemeProvider>
 );
