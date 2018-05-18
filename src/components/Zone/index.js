@@ -35,11 +35,11 @@ const Zone = ({ src, text, type, right, ...props }) => (
     </Box>
     <Box
       position="absolute"
-      w="60%"
+      w={["50%", null, "60%"]}
       top="3%"
       right={right && 0}
       left={!right && 0}
-      transform={`translateX(${right ? '' :　'-'}50%)`}
+      transform={`translateX(${right ? '' :　'-'}40%)`}
     >
      <BackgroundImage
       src={src}
