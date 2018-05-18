@@ -9,7 +9,6 @@ import BackgroundImage from '../BackgroundImage';
 const None = () => (
   <Box
     w={1 / 2}
-    bg="teal"
   />
 );
 
