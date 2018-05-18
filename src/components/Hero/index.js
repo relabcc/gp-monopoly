@@ -16,7 +16,7 @@ const Hero = (props) => (
       color="white"
       p="0.5em"
       f="2em"
-      mt="-0.9em"
+      mt="-1.2em"
       position="relative"
     >
       一網打盡 能源大地圖
