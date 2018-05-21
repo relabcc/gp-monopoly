@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import Flex from '../Flex';
 import Text from '../Text';
 import Box from '../Box';
 import BackgroundImage from '../BackgroundImage';
@@ -21,17 +19,15 @@ const Zone = ({ src, text, type, right, ...props }) => (
     position="relative"
     {...props}
   >
-    <Box p="1px">
-      <Box
-        px="12%"
-        py="1em"
-        textAlign="center"
-      >
-        <Box px="25%" py="1em">
-          <BackgroundImage src={types[type]} ratio={112 / 72.69} />
-        </Box>
-        <Text whiteSpace="pre-wrap">{text}</Text>
+    <Box
+      px="12%"
+      py="1em"
+      textAlign="center"
+    >
+      <Box px="25%" py="1em">
+        <BackgroundImage src={types[type]} ratio={112 / 72.69} />
       </Box>
+      <Text whiteSpace="pre-wrap">{text}</Text>
     </Box>
     <Box
       position="absolute"

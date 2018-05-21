@@ -1,15 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import Flex from '../Flex';
-import Text from '../Text';
 import Box from '../Box';
-import BackgroundImage from '../BackgroundImage';
 
-const None = () => (
+const None = (props) => (
   <Box
     w={1 / 2}
-    bg="teal"
+    colSpan="2"
+    {...props}
   />
 );
 

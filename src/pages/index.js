@@ -1,19 +1,17 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 import Container from '../components/Container';
 import Box from '../components/Box';
 import Text from '../components/Text';
 import Hero from '../components/Hero';
 import Maze from '../components/Maze';
-import Button from '../components/Button';
 import Icontext from '../components/Icontext';
 import Flex from '../components/Flex';
 
 import legend from '../text/legend';
 
 const Index = () => (
-  <Container>
+  <Container pb="4em">
     <Hero />
     <Flex
       border="2px solid"

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Flex from '../Flex';
+import MazeTable from '../MazeTable';
 import Block from '../Block';
 import Go from '../Go';
 import Zone from '../Zone';
@@ -20,23 +20,26 @@ const modules = {
 };
 
 const Maze = ({src, ...props}) => (
-  <Flex
-    justify="center"
-    bg="teal"
-    flexWrap="wrap"
+  <Box
     position="relative"
     {...props}
   >
-    {linkbox.map(({ module, ...link }) => {
-      const Module = modules[module];
-      return (
-        <Module {...link} />
-      );
-    })}
+    <MazeTable bg="teal">
+      {linkbox.map((row, index) => (
+        <tr key={index}>
+          {row.map(({ module, ...link }) => {
+            const Module = modules[module];
+            return (
+              <Module is="td" {...link} />
+            );
+          })}
+        </tr>
+      ))}
+    </MazeTable>
     <CenterMen />
     <Chance />
     <Destiny />
-  </Flex>
+  </Box>
 );
 
 export default Maze;
