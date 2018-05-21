@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { chance, chanceSub } from '../../text';
 import question from '../Zone/question.svg';
 
 import Box from '../Box';
-import Text from '../Text';
 import Flex from '../Flex';
 import BackgroundImage from '../BackgroundImage';
+import BigLetter from '../BigLetter';
 
 const Chance = () => (
   <Box
@@ -26,16 +26,24 @@ const Chance = () => (
       align="flex-end"
       px="5%"
     >
-      <Box f={["1.5em", "2.5em", "2.5em"]}>機</Box>
+      <Box>
+        <BigLetter>
+          {chance[0]}
+        </BigLetter>
+      </Box>
       <Box w={1/3}>
         <BackgroundImage
           src={question}
           ratio={112 / 72.69}
         />
       </Box>
-      <Box f={["1.5em", "2.5em", "2.5em"]}>會</Box>
+      <Box>
+        <BigLetter>
+          {chance[1]}
+        </BigLetter>
+      </Box>
     </Flex>
-    <Box pt="40%" f={["1.2em", null, "1.5em"]}>臺灣的轉機</Box>
+    <Box pt="40%" f={["1.2em", null, "1.5em"]}>{chanceSub}</Box>
   </Box>
 );
 

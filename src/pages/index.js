@@ -15,8 +15,7 @@ const Index = () => (
     <Hero />
     <Flex
       border="2px solid"
-      borderRadius="8px"
-      fontWeight="700"
+      borderRadius="0.25em"
       color="black"
       mx="2.5em"
       my="1.5em"
@@ -25,7 +24,7 @@ const Index = () => (
       align="center"
     >
       {legend.map((key, index) =>
-        <Box w={1/3} align="center" py="1em">
+        <Box w={1 / 3} align="center" py="1em">
           <Icontext px="30%" src={key.src} />
           <Text>{key.text}</Text>
         </Box>

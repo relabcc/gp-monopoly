@@ -1,25 +1,16 @@
 import chunk from 'lodash/chunk';
+import images from './images';
+import text from './text';
 
-import crow from './crow.svg';
-import earth from './earth.svg';
-import kangaroo from './kangaroo.svg';
-import bear from './bear.svg';
-import eagle from './eagle.svg';
-import denmark from './denmark.svg';
-import germany from './germany.svg';
-import netherland from './netherland.svg';
-import drop from './drop.svg';
-import cloud from './cloud.svg';
-import bolt from './bolt.svg';
-import meter from './meter.svg';
-import money from './money.svg';
-import saving from './saving.svg';
-import taiwan from './taiwan.svg';
-import potential from './potential.svg';
-import network from './network.svg';
-import factory from './factory.svg';
-import emission from './emission.svg';
-import { right } from 'styled-system/dist/styles';
+const transformer = (item) => {
+  const { key } = item;
+  if (!key) return item;
+  return {
+    ...item,
+    text: text[key],
+    src: images[key],
+  };
+}
 
 const top = [
   {
@@ -27,129 +18,112 @@ const top = [
   },
   {
     module: 'Block',
-    src: earth,
     type: 'policy',
-    text: '國際再生能源署'
-  },
-  {
-    module: 'Block',
-    src: kangaroo,
-    type: 'policy',
-    text: '澳洲能源及環境政府部門'
+    key: 'earth',
   },
   {
     module: 'Block',
     type: 'policy',
-    src: crow,
-    text: '德國能源署'
+    key: 'kangaroo',
   },
-];
+  {
+    module: 'Block',
+    type: 'policy',
+    key: 'crow',
+  },
+].map(transformer);
+
 const bottom = [
   {
     module: 'Zone',
     type: 'exclamation',
-    src: emission,
-    text: '臺灣十大溫室氣體排放源'
+    key: 'emission',
   },
   {
     module: 'Block',
     type: 'info',
-    src: drop,
-    text: '臺灣雨水ph値觀測'
+    key: 'drop',
   },
   {
     module: 'Block',
     type: 'info',
-    src: meter,
-    text: '臺灣即時發電量資訊'
+    key: 'meter',
   },
   {
     module: 'Block',
     type: 'info',
-    src: bolt,
-    text: '國家能源消費統計'
+    key: 'bolt',
   },
-];
+].map(transformer);
+
 const middle = [
   {
     module: 'Zone',
     type: 'question',
-    src: saving,
-    text: '綠電合作社介紹'
+    key: 'saving',
   },
   {
     module: 'Block',
     type: 'policy',
-    src: bear,
-    text: '臺灣能源局'
+    key: 'bear',
   },
 
   {
     module: 'Zone',
     type: 'exclamation',
-    src: factory,
-    text: '臺灣發電現況'
+    key: 'factory',
   },
   {
     module: 'Block',
     type: 'policy',
-    src: eagle,
-    text: '美國能源資訊管理局'
+    key: 'eagle',
   },
 
   {
     module: 'Block',
     type: 'change',
-    src: denmark,
-    text: '丹麥風力發電案例'
+    key: 'denmark',
   },
   {
     module: 'Zone',
     type: 'question',
-    src: potential,
-    text: '臺灣再生能源潛力',
-    right
+    key: 'potential',
+    right: true,
   },
 
   {
     module: 'Block',
     type: 'change',
-    src: netherland,
-    text: '荷蘭生質能案例',
+    key: 'netherland',
   },
   {
     module: 'Zone',
     type: 'exclamation',
-    src: taiwan,
-    text: '臺灣空氣品質地圖 PM2.5',
-    right
+    key: 'taiwan',
+    right: true,
   },
   {
     module: 'Block',
     type: 'change',
-    src: germany,
-    text: '德國在地發電案例'
+    key: 'germany',
   },
   {
     module: 'Block',
     type: 'info',
-    src: cloud,
-    text: '環保署空氣品質監測網'
+    key: 'cloud',
   },
 
   {
     module: 'Zone',
     type: 'question',
-    src: network,
-    text: '公民電廠陽光伏特家'
+    key: 'network',
   },
   {
     module: 'Block',
     type: 'info',
-    src: money,
-    text: '台電公開資訊'
+    key: 'money',
   },
-];
+].map(transformer);
 
 export default [
   top,
