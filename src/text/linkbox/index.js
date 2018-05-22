@@ -20,16 +20,19 @@ const top = [
     module: 'Block',
     type: 'policy',
     key: 'earth',
+    href: 'https://www.mofa.gov.tw/igo/News_Content.aspx?n=F29A02A9D36C47F0&sms=22C3B697A101DF19&s=386221D6D21FC36F',
   },
   {
     module: 'Block',
     type: 'policy',
     key: 'kangaroo',
+    href: 'http://www.environment.gov.au/',
   },
   {
     module: 'Block',
     type: 'policy',
     key: 'crow',
+    href: 'https://www.dena.de/en/about-dena/',
   },
 ].map(transformer);
 
@@ -38,21 +41,25 @@ const bottom = [
     module: 'Zone',
     type: 'exclamation',
     key: 'emission',
+    href: 'http://rsprc.ntu.edu.tw/zh-TW/m01/risk-society/197-articles_overall_category/article-discusses-the-classification/energy_trans/769-open-energy_1060907',
   },
   {
     module: 'Block',
     type: 'info',
     key: 'drop',
+    href: 'https://www.taiwanstat.com/realtime/rain-ph/',
   },
   {
     module: 'Block',
     type: 'info',
     key: 'meter',
+    href: 'https://www.taiwanstat.com/realtime/power/',
   },
   {
     module: 'Block',
     type: 'info',
     key: 'bolt',
+    href: 'https://web3.moeaboe.gov.tw/wesnq/Views/C01/wFrmC0101.aspx',
   },
 ].map(transformer);
 
@@ -61,33 +68,38 @@ const middle = [
     module: 'Zone',
     type: 'question',
     key: 'saving',
+    href: 'http://e-info.org.tw/node/202157',
   },
   {
     module: 'Block',
     type: 'policy',
     key: 'bear',
+    href: 'https://www.moeaboe.gov.tw',
   },
 
   {
     module: 'Zone',
     type: 'exclamation',
     key: 'factory',
+    href: 'http://www.taipower.com.tw/tc/page.aspx?mid=206',
   },
   {
     module: 'Block',
     type: 'policy',
     key: 'eagle',
+    href: 'https://www.eia.gov/',
   },
-
   {
     module: 'Block',
     type: 'change',
     key: 'denmark',
+    href: 'http://e-info.org.tw/node/113350',
   },
   {
     module: 'Zone',
     type: 'question',
     key: 'potential',
+    href: 'https://www.thenewslens.com/article/41324',
     right: true,
   },
 
@@ -95,33 +107,39 @@ const middle = [
     module: 'Block',
     type: 'change',
     key: 'netherland',
+    href: 'http://www.seinsights.asia/article/3291/3271/3942',
   },
   {
     module: 'Zone',
     type: 'exclamation',
     key: 'taiwan',
+    href: 'https://www.taiwanstat.com/realtime/air-map/',
     right: true,
   },
   {
     module: 'Block',
     type: 'change',
     key: 'germany',
+    href: 'https://www.csronereporting.com/news/show/4166',
   },
   {
     module: 'Block',
     type: 'info',
     key: 'cloud',
+    href: 'https://taqm.epa.gov.tw/taqm/tw/default.aspx',
   },
 
   {
     module: 'Zone',
     type: 'question',
     key: 'network',
+    href: 'http://www.verymulan.com/issue/%E3%80%8C%E6%88%91%E5%80%91%E8%B6%85%E6%83%B3%E8%A6%81%E7%B6%A0%E8%89%B2%E8%83%BD%E6%BA%90%E3%80%8D%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E6%AF%94%E8%B5%B7%E9%88%94%E7%A5%A8%EF%BC%8C%E4%BB%96%E5%80%91%E6%9B%B4%E6%83%B3%E8%A6%81%E5%A4%AA%E9%99%BD%E8%83%BD%E6%9D%BF%EF%BC%9F-14461.html?author_id=47',
   },
   {
     module: 'Block',
     type: 'info',
     key: 'money',
+    href: 'https://www.taipower.com.tw/tc/page.aspx?mid=413',
   },
 ].map(transformer);
 

@@ -28,8 +28,8 @@ const Link = styled(tag.a)`
 
 Link.defaultProps = {
   blacklist,
-  color: 'primary',
-  hoverColor: 'primary',
+  color: 'black',
+  hoverColor: 'black',
   fontWeight: 'bold',
 };
 
