@@ -30,7 +30,7 @@ Link.defaultProps = {
   blacklist,
   color: 'black',
   hoverColor: 'black',
-  fontWeight: 'bold',
+  fontWeight: 'normal',
 };
 
 export default Link;
