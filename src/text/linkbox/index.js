@@ -20,7 +20,7 @@ const top = [
     module: 'Block',
     type: 'policy',
     key: 'earth',
-    href: 'https://www.mofa.gov.tw/igo/News_Content.aspx?n=F29A02A9D36C47F0&sms=22C3B697A101DF19&s=386221D6D21FC36F',
+    href: 'http://www.irena.org/newsroom',
   },
   {
     module: 'Block',
@@ -74,7 +74,7 @@ const middle = [
     module: 'Block',
     type: 'policy',
     key: 'bear',
-    href: 'https://www.moeaboe.gov.tw',
+    href: 'https://www.moeaboe.gov.tw/ECW/populace/content/SubMenu.aspx?menu_id=48',
   },
 
   {

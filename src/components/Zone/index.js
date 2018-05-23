@@ -21,12 +21,13 @@ const Zone = ({ src, text, type, right, href, ...props }) => (
     {...props}
   >
     <Link href={href} target="_blank">
+      <Box pt="20%" />
       <Box
-        px="12%"
-        py="1em"
+        px="5%"
+        pb="0.5em"
         textAlign="center"
       >
-        <Box px="25%" py="1em">
+        <Box px="34%" pb="0.25em">
           <BackgroundImage src={types[type]} ratio={112 / 72.69} />
         </Box>
         <Text whiteSpace="pre-wrap">{text}</Text>
@@ -37,12 +38,12 @@ const Zone = ({ src, text, type, right, href, ...props }) => (
         top="3%"
         right={right && 0}
         left={!right && 0}
-        transform={`translateX(${right ? '' :　'-'}40%)`}
+        transform={`translateX(${right ? '' :　'-'}36%)`}
       >
-      <BackgroundImage
-        src={src}
-        ratio={100.05 / 101}
-      />
+        <BackgroundImage
+          src={src}
+          ratio={100.05 / 101}
+        />
       </Box>
     </Link>
   </Box>

@@ -24,7 +24,7 @@ const Maze = ({src, ...props}) => (
     position="relative"
     {...props}
   >
-    <MazeTable bg="teal">
+    <MazeTable bg="teal" width="100%">
       {linkbox.map((row, index) => (
         <tr key={index}>
           {row.map(({ module, ...link }) => {

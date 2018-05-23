@@ -31,11 +31,11 @@ const Block = ({ src, text, type, href, ...props }) => (
         <BackgroundImage src={types[type]} ratio={36.9 / 34.75} />
       </Box>
       <Box
-        px="12%"
-        py="1em"
+        px="5%"
+        py="0.25em"
         textAlign="center"
       >
-        <Box px="10%" py="1em">
+        <Box px="20%" py="0.5em">
           <BackgroundImage src={src} ratio={56 / 91.31} />
         </Box>
         <Text whiteSpace="pre-wrap">{text}</Text>

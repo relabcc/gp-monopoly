@@ -19,7 +19,7 @@ const Index = () => (
       color="black"
       mx="2.5em"
       my="1.5em"
-      px="3em"
+      px={['2em', null,'3em']}
       justify="center"
       align="center"
     >

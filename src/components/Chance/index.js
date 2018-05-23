@@ -11,7 +11,7 @@ const Chance = () => (
   <Box
     position="absolute"
     w="30%"
-    top="20%"
+    top="16%"
     left="50%"
     transform="translateX(-50%)"
     bg="white"

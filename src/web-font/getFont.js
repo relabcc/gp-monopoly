@@ -16,8 +16,9 @@ const fontMin = require('./fontMin');
 const sourceText = {
   400: [chanceSub, destinySub]
     .concat(map(legend))
-    .concat(map(linkbox)),
-  600: [siteTitle, chance, destiny],
+    .concat(map(linkbox))
+    .concat(' '),
+  600: [siteTitle, chance, destiny].concat(' '),
 }
 
 fontMin(sourceText).then(process.exit)

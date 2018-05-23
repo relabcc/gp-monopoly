@@ -7,7 +7,7 @@ import BackgroundImage from '../BackgroundImage';
 
 const Go = (props) => (
   <Box w={1 / 4} bg="teal" border="2px solid black" {...props}>
-    <Box mt="1em">
+    <Box>
       <BackgroundImage src={go} ratio={178.88 / 170.23} />
     </Box>
   </Box>

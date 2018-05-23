@@ -11,7 +11,7 @@ const Destiny = () => (
   <Box
     position="absolute"
     w="30%"
-    bottom="20%"
+    bottom="16%"
     left="50%"
     transform="translateX(-50%)"
     bg="white"
