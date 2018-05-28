@@ -12,7 +12,7 @@ const transformer = (item) => {
   };
 }
 
-const top = [
+const all = [
   {
     module: 'Go',
   },
@@ -34,36 +34,6 @@ const top = [
     key: 'crow',
     href: 'https://www.dena.de/en/about-dena/',
   },
-].map(transformer);
-
-const bottom = [
-  {
-    module: 'Zone',
-    type: 'exclamation',
-    key: 'emission',
-    href: 'http://rsprc.ntu.edu.tw/zh-TW/m01/risk-society/197-articles_overall_category/article-discusses-the-classification/energy_trans/769-open-energy_1060907',
-  },
-  {
-    module: 'Block',
-    type: 'info',
-    key: 'drop',
-    href: 'https://www.taiwanstat.com/realtime/rain-ph/',
-  },
-  {
-    module: 'Block',
-    type: 'info',
-    key: 'meter',
-    href: 'https://www.taiwanstat.com/realtime/power/',
-  },
-  {
-    module: 'Block',
-    type: 'info',
-    key: 'bolt',
-    href: 'https://web3.moeaboe.gov.tw/wesnq/Views/C01/wFrmC0101.aspx',
-  },
-].map(transformer);
-
-const middle = [
   {
     module: 'Zone',
     type: 'question',
@@ -141,10 +111,48 @@ const middle = [
     key: 'money',
     href: 'https://www.taipower.com.tw/tc/page.aspx?mid=413',
   },
+  {
+    module: 'Zone',
+    type: 'exclamation',
+    key: 'emission',
+    href: 'http://rsprc.ntu.edu.tw/zh-TW/m01/risk-society/197-articles_overall_category/article-discusses-the-classification/energy_trans/769-open-energy_1060907',
+  },
+  {
+    module: 'Block',
+    type: 'info',
+    key: 'drop',
+    href: 'https://www.taiwanstat.com/realtime/rain-ph/',
+  },
+  {
+    module: 'Block',
+    type: 'info',
+    key: 'meter',
+    href: 'https://www.taiwanstat.com/realtime/power/',
+  },
+  {
+    module: 'Block',
+    type: 'info',
+    key: 'bolt',
+    href: 'https://web3.moeaboe.gov.tw/wesnq/Views/C01/wFrmC0101.aspx',
+  },
 ].map(transformer);
 
-export default [
-  top,
-  ...chunk(middle, 2).map((row) => [row[0], { module: 'None' }, row[1]]),
-  bottom,
-];
+const getTable = (perRow) => {
+  const allWithWidth = all.map((item) => ({ ...item, w: 1 / perRow }));
+  const top = allWithWidth.slice(0, perRow);
+  const bottom = allWithWidth.slice(20 - perRow);
+  const middle = allWithWidth.slice(perRow, 20 - perRow);
+  const middleLength = perRow - 2;
+
+  return  [
+    top,
+    ...chunk(middle, 2).map((row) => [
+      row[0],
+      { module: 'None', w: middleLength / perRow, colSpan: middleLength  },
+      row[1],
+    ]),
+    bottom,
+  ];
+};
+
+export default getTable(8);

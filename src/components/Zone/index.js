@@ -14,7 +14,6 @@ const types = {
 
 const Zone = ({ src, text, type, right, href, ...props }) => (
   <Box
-    w={1 / 4}
     border="2px solid black"
     bg="gray"
     position="relative"

@@ -17,7 +17,6 @@ const types = {
 
 const Block = ({ src, text, type, href, ...props }) => (
   <Box
-    w={1 / 4}
     border="2px solid black"
     bg="white"
     {...props}
