@@ -10,22 +10,22 @@ import BigLetter from '../BigLetter';
 const Destiny = () => (
   <Box
     position="absolute"
-    w="30%"
-    bottom="16%"
-    left="50%"
-    transform="translateX(-50%)"
+    w={['30%', null, null, null, '20%']}
+    bottom={['16%', null, null, null, '50%']}
+    left={['50%', null, null, null, 'auto']}
+    right={[null, null, null, null, '15%']}
+    transform={['translateX(-50%)', null, null, null, 'translateY(50%)']}
     bg="white"
     border="2px solid"
     borderRadius="8px"
     align="center"
     px="3%"
-    py="7%"
+    py={['7%', null, null, null, '3%']}
   >
       <Flex
         justify="space-around"
         align="flex-end"
         px="5%"
-        pb="10%"
       >
         <Box><BigLetter>{destiny[0]}</BigLetter></Box>
         <Box w={1 / 3}>

@@ -17,15 +17,15 @@ const Index = () => (
       border="2px solid"
       borderRadius="0.25em"
       color="black"
-      mx="2.5em"
+      mx={['2.5em', null, null, null, '5em']}
       my="1.5em"
-      px={['2em', null,'3em']}
+      px={['2em', null, '3em']}
       justify="center"
       align="center"
     >
       {legend.map((key, index) =>
-        <Box w={1 / 3} align="center" py="1em">
-          <Icontext px="30%" src={key.src} />
+        <Box w={1 / 3} align="center" py="1em" key={index}>
+          <Icontext px={['30%', null, null, null, '40%']} src={key.src} />
           <Text>{key.text}</Text>
         </Box>
       )

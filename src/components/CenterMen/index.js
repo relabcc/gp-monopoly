@@ -8,7 +8,7 @@ import BackgroundImage from '../BackgroundImage';
 const CenterMan = () => (
   <Box
     position="absolute"
-    w="48%"
+    w={['48%', null, null, null, '25%']}
     top="50%"
     left="50%"
     transform="translate(-50%, -50%)"

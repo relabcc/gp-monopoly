@@ -10,16 +10,16 @@ import BigLetter from '../BigLetter';
 const Chance = () => (
   <Box
     position="absolute"
-    w="30%"
-    top="16%"
-    left="50%"
-    transform="translateX(-50%)"
+    w={['30%', null, null, null, '20%']}
+    top={['16%', null, null, null, '50%']}
+    left={['50%', null, null, null, '15%']}
+    transform={['translateX(-50%)', null, null, null, 'translateY(-50%)']}
     bg="white"
     border="2px solid"
     borderRadius="8px"
     align="center"
     px="3%"
-    py="7%"
+    py={['7%', null, null, null, '3%']}
   >
     <Flex
       justify="space-around"

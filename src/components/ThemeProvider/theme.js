@@ -3,8 +3,8 @@ import constants from 'styled-system/dist/constants';
 
 const emToPx = (em) => em * 16;
 
-export const breakpoints = [36, 48, 62, 90, 105].map(emToPx);
-export const containerWidth = [36, 46].map(emToPx);
+export const breakpoints = [36, 48, 62, 105].map(emToPx);
+export const containerWidth = [36, 46, 46, 46, 80].map(emToPx);
 
 const font = '"Gen Jyuu Gothic", "PingFang TC", "HeiTi TC", "Microsoft JhengHei", sans-serif';
 

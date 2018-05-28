@@ -20,22 +20,24 @@ const modules = {
   None,
 };
 
-const Maze = ({ windowWidth, ...props }) => (
+const Maze = ({ windowWidth, windowHeight, ...props }) => (
   <Box
     position="relative"
     {...props}
   >
     <MazeTable bg="teal" width="100%">
-      {linkbox(windowWidth >= 1680 ? 8 : 4).map((row, index) => (
-        <tr key={index}>
-          {row.map(({ module, ...link }) => {
-            const Module = modules[module];
-            return (
-              <Module is="td" {...link} />
-            );
-          })}
-        </tr>
-      ))}
+      <tbody>
+        {linkbox(windowWidth >= 1680 ? 8 : 4).map((row, index) => (
+          <tr key={index}>
+            {row.map(({ module, ...link }, id) => {
+              const Module = modules[module];
+              return (
+                <Module is="td" key={id} {...link} />
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
     </MazeTable>
     <CenterMen />
     <Chance />

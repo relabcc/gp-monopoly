@@ -8,7 +8,7 @@ import hero from './hero.svg';
 import { siteTitle } from '../../text';
 
 const Hero = (props) => (
-  <Box align="center" mx="4em" mt="4em">
+  <Box align="center" mx={['4em', null, null, null, '8em']} mt="4em">
     <BackgroundImage mt="1em" src={hero} ratio={253.81 / 489.11} />
     <Box
       border="2px solid black"
