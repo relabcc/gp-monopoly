@@ -6,20 +6,21 @@ import Box from '../Box';
 import Flex from '../Flex';
 import BackgroundImage from '../BackgroundImage';
 import BigLetter from '../BigLetter';
+import mobileOrDesktop from '../ThemeProvider/mobileOrDesktop';
 
 const Chance = () => (
   <Box
     position="absolute"
-    w={['30%', null, null, null, '20%']}
-    top={['16%', null, null, null, '50%']}
-    left={['50%', null, null, null, '15%']}
-    transform={['translateX(-50%)', null, null, null, 'translateY(-50%)']}
+    w={mobileOrDesktop('30%', '20%')}
+    top={mobileOrDesktop('16%', '50%')}
+    left={mobileOrDesktop('50%', '15%')}
+    transform={mobileOrDesktop('translateX(-50%)', 'translateY(-50%)')}
     bg="white"
     border="2px solid"
     borderRadius="8px"
     align="center"
     px="3%"
-    py={['7%', null, null, null, '3%']}
+    py={mobileOrDesktop('7%', '3%')}
   >
     <Flex
       justify="space-around"

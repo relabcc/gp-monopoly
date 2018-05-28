@@ -7,6 +7,7 @@ import Hero from '../components/Hero';
 import Maze from '../components/Maze';
 import Icontext from '../components/Icontext';
 import Flex from '../components/Flex';
+import mobileOrDesktop from '../components/ThemeProvider/mobileOrDesktop';
 
 import legend from '../text/legend';
 
@@ -17,7 +18,7 @@ const Index = () => (
       border="2px solid"
       borderRadius="0.25em"
       color="black"
-      mx={['2.5em', null, null, null, '5em']}
+      mx={mobileOrDesktop('5%', '30%')}
       my="1.5em"
       px={['2em', null, '3em']}
       justify="center"
@@ -25,7 +26,7 @@ const Index = () => (
     >
       {legend.map((key, index) =>
         <Box w={1 / 3} align="center" py="1em" key={index}>
-          <Icontext px={['30%', null, null, null, '40%']} src={key.src} />
+          <Icontext px={mobileOrDesktop('30%', '40%')} src={key.src} />
           <Text>{key.text}</Text>
         </Box>
       )
