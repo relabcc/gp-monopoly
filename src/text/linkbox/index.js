@@ -155,4 +155,4 @@ const getTable = (perRow) => {
   ];
 };
 
-export default getTable(8);
+export default getTable;

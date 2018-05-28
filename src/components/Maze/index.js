@@ -1,4 +1,5 @@
 import React from 'react';
+import windowSize from 'react-window-size';
 
 import MazeTable from '../MazeTable';
 import Block from '../Block';
@@ -19,13 +20,13 @@ const modules = {
   None,
 };
 
-const Maze = ({src, ...props}) => (
+const Maze = ({ windowWidth, ...props }) => (
   <Box
     position="relative"
     {...props}
   >
     <MazeTable bg="teal" width="100%">
-      {linkbox.map((row, index) => (
+      {linkbox(windowWidth >= 1680 ? 8 : 4).map((row, index) => (
         <tr key={index}>
           {row.map(({ module, ...link }) => {
             const Module = modules[module];
@@ -42,4 +43,4 @@ const Maze = ({src, ...props}) => (
   </Box>
 );
 
-export default Maze;
+export default windowSize(Maze);
