@@ -20,7 +20,7 @@ const Hero = (props) => (
       mt="-1.2em"
       position="relative"
     >
-      <Text.h1 f={['0.75em', '1em', '1em']} fontWeight={600}>
+      <Text.h1 f={['0.75em', '1em', '1em', null, '1.5em']} fontWeight={600}>
         {siteTitle}
       </Text.h1>
     </Box>
