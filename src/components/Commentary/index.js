@@ -14,7 +14,7 @@ const Commentary = (props) => (
       color="black"
       mx={['2.5em', null, null, null, '5em']}
       my="1.5em"
-      px={['2em', null, '3em']}
+      px={['0.5em', '2em', '3em']}
       justify="center"
       align="center"
     >
