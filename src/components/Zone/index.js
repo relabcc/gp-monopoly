@@ -12,10 +12,11 @@ const types = {
   exclamation,
 };
 
-const Zone = ({ src, text, type, right, href, ...props }) => (
+const Zone = ({ src, text, type, right, href, highlight, ...props }) => (
   <Box
     border="2px solid black"
-    bg="gray"
+    bg={highlight ? 'teal' : 'gray'}
+    transition={highlight ? '' : 'background 0.4s'}
     position="relative"
     {...props}
   >

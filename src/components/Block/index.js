@@ -15,32 +15,36 @@ const types = {
   policy,
 };
 
-const Block = ({ src, text, type, href, ...props }) => (
-  <Box
-    border="2px solid black"
-    bg="white"
-    {...props}
-  >
-    <Link href={href} target="_blank">
-      <Box
-        px="40%"
-        borderBottom="2px solid"
-        bg={`types.${type}`}
-      >
-        <BackgroundImage src={types[type]} ratio={36.9 / 34.75} />
-      </Box>
-      <Box
-        px="5%"
-        py="0.25em"
-        textAlign="center"
-      >
-        <Box px="20%" py="0.5em">
-          <BackgroundImage src={src} ratio={56 / 91.31} />
+const Block = ({ src, text, type, href, highlight, ...props }) => {
+  const typeColor = `types.${type}`;
+  return (
+    <Box
+      border="2px solid black"
+      bg={highlight ? typeColor : 'white'}
+      transition={highlight ? '' : 'background 0.4s'}
+      {...props}
+    >
+      <Link href={href} target="_blank">
+        <Box
+          px="40%"
+          borderBottom="2px solid"
+          bg={typeColor}
+        >
+          <BackgroundImage src={types[type]} ratio={36.9 / 34.75} />
         </Box>
-        <Text whiteSpace="pre-wrap">{text}</Text>
-      </Box>
-    </Link>
-  </Box>
-);
+        <Box
+          px="5%"
+          py="0.25em"
+          textAlign="center"
+        >
+          <Box px="20%" py="0.5em">
+            <BackgroundImage src={src} ratio={56 / 91.31} />
+          </Box>
+          <Text whiteSpace="pre-wrap">{text}</Text>
+        </Box>
+      </Link>
+    </Box>
+  );
+};
 
 export default Block;

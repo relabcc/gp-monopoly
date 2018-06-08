@@ -137,19 +137,26 @@ const all = [
   },
 ].map(transformer);
 
+export const linkLength = all.length;
+
+
 const getTable = (perRow) => {
   const allWithWidth = all.map((item) => ({ ...item, w: 1 / perRow }));
-  const top = allWithWidth.slice(0, perRow);
-  const bottom = allWithWidth.slice(20 - perRow);
-  const middle = allWithWidth.slice(perRow, 20 - perRow);
-  const middleLength = perRow - 2;
+  const top = allWithWidth.slice(0, perRow).map((data, id) => ({ ...data, id }));
+  const middle = allWithWidth.slice(perRow, linkLength - perRow);
+  const middleLength = middle.length;
+  const bottom = allWithWidth.slice(linkLength - perRow).map((data, id) => ({
+    ...data,
+    id: (perRow - 1) + (middleLength / 2) + (perRow - id),
+  }));
+  const middleCenterSpan = perRow - 2;
 
   return  [
     top,
-    ...chunk(middle, 2).map((row) => [
-      row[0],
-      { module: 'None', w: middleLength / perRow, colSpan: middleLength  },
-      row[1],
+    ...chunk(middle, 2).map((row, rowId) => [
+      { ...row[0], id: linkLength - rowId - 1 },
+      { module: 'None', w: middleCenterSpan / perRow, colSpan: middleCenterSpan  },
+      { ...row[1], id: perRow + rowId },
     ]),
     bottom,
   ];
