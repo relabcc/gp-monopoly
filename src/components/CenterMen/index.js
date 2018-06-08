@@ -1,15 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import centerMan from './center-man.svg';
 
 import Box from '../Box';
 import BackgroundImage from '../BackgroundImage';
+import mobileOrDesktop from '../ThemeProvider/mobileOrDesktop';
 
 const CenterMan = () => (
   <Box
     position="absolute"
-    w={['48%', null, null, null, '25%']}
-    top="50%"
+    w={mobileOrDesktop('48%', '20%')}
+    top={mobileOrDesktop('50%', '52%')}
     left="50%"
     transform="translate(-50%, -50%)"
   >

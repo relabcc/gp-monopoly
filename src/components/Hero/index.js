@@ -6,9 +6,10 @@ import BackgroundImage from '../BackgroundImage';
 import Text from '../Text';
 import hero from './hero.svg';
 import { siteTitle } from '../../text';
+import mobileOrDesktop from '../ThemeProvider/mobileOrDesktop';
 
 const Hero = (props) => (
-  <Box align="center" mx={['4em', null, null, null, '8em']} mt="4em">
+  <Box align="center" mx={mobileOrDesktop('12.5%', '33%')} mt="4em">
     <BackgroundImage mt="1em" src={hero} ratio={253.81 / 489.11} />
     <Box
       border="2px solid black"
@@ -16,11 +17,10 @@ const Hero = (props) => (
       bg="teal"
       color="white"
       p="0.5em"
-      f="2em"
-      mt="-1.2em"
+      mt="-1.75em"
       position="relative"
     >
-      <Text.h1 f={['0.75em', '1em', '1em', null, '1.5em']} fontWeight={600}>
+      <Text.h1 f="2em" fontWeight={600}>
         {siteTitle}
       </Text.h1>
     </Box>

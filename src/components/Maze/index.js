@@ -1,5 +1,6 @@
 import React from 'react';
 import windowSize from 'react-window-size';
+import last from 'lodash/last';
 
 import MazeTable from '../MazeTable';
 import Block from '../Block';
@@ -9,6 +10,7 @@ import None from '../None';
 import CenterMen from '../CenterMen';
 import Chance from '../Chance';
 import Destiny from '../Destiny';
+import theme from '../ThemeProvider/theme';
 
 import Box from '../Box';
 import linkbox from '../../text/linkbox';
@@ -27,7 +29,7 @@ const Maze = ({ windowWidth, windowHeight, ...props }) => (
   >
     <MazeTable bg="teal" width="100%">
       <tbody>
-        {linkbox(windowWidth >= 1680 ? 8 : 4).map((row, index) => (
+        {linkbox(windowWidth >= last(theme.breakpoints) ? 8 : 4).map((row, index) => (
           <tr key={index}>
             {row.map(({ module, ...link }, id) => {
               const Module = modules[module];
