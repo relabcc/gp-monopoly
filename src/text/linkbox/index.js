@@ -109,19 +109,19 @@ const all = [
     module: 'Block',
     type: 'info',
     key: 'money',
-    href: 'https://www.taipower.com.tw/tc/page.aspx?mid=413',
+    href: 'https://www.taipower.com.tw/tc/pageList.aspx',
   },
   {
     module: 'Zone',
     type: 'exclamation',
     key: 'emission',
-    href: 'http://rsprc.ntu.edu.tw/zh-TW/m01/risk-society/197-articles_overall_category/article-discusses-the-classification/energy_trans/769-open-energy_1060907',
+    href: 'http://rsprc.ntu.edu.tw/zh-tw/m01-3/energy-transformation/open-energy/704-10606-20-greenhouse-gas-source.html',
   },
   {
     module: 'Block',
     type: 'info',
     key: 'drop',
-    href: 'https://www.taiwanstat.com/realtime/rain-ph/',
+    href: 'https://www.cwb.gov.tw/V7/observe/phRain/',
   },
   {
     module: 'Block',

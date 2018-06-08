@@ -21,6 +21,11 @@ export default merge(constants, {
     gray,
     primary: teal,
     secondary: 'orange',
+    types: {
+      change: '#FFB048',
+      info: '#50ACD1',
+      policy: '#FFB0A8',
+    },
   },
   breakpoints,
   containerWidth,

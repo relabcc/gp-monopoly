@@ -25,7 +25,7 @@ const Block = ({ src, text, type, href, ...props }) => (
       <Box
         px="40%"
         borderBottom="2px solid"
-        bg="teal"
+        bg={`types.${type}`}
       >
         <BackgroundImage src={types[type]} ratio={36.9 / 34.75} />
       </Box>
