@@ -15,6 +15,8 @@
     "d3-timer": "^1.0.7",
     "gatsby": "^1.9.250",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-facebook-pixel": "^1.0.3",
+    "gatsby-plugin-gtag": "^1.0.4",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-styled-components": "^2.0.11",
     "lodash": "^4.17.10",

@@ -8,6 +8,7 @@ import {
   letterSpacing,
 } from 'styled-system';
 import tag from 'clean-tag';
+import get from 'lodash/get';
 
 import blacklist from './utils/blacklist';
 import { getColorByPropKey } from './utils/getColor';
@@ -31,6 +32,15 @@ Link.defaultProps = {
   color: 'black',
   hoverColor: 'black',
   fontWeight: 'normal',
+  onClick: (e) => {
+    if (window.gtag) {
+      const label = get(e.target, 'dataset.label', e.target.href);
+      window.gtag('event', 'Click', {
+        'event_category': 'Outbound Links',
+        'event_label': label,
+      });
+    }
+  }
 };
 
 export default Link;

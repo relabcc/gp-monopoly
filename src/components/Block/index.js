@@ -24,7 +24,7 @@ const Block = ({ src, text, type, href, highlight, ...props }) => {
       transition={highlight ? '' : 'background 0.4s'}
       {...props}
     >
-      <Link href={href} target="_blank">
+      <Link href={href} target="_blank" data-label={text}>
         <Box
           px="40%"
           borderBottom="2px solid"

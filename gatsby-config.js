@@ -6,6 +6,18 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    // {
+    //   resolve: 'gatsby-plugin-gtag',
+    //   options: {
+    //     trackingId: 'gaId',
+    //   },
+    // },
+    // {
+    //   resolve: 'gatsby-plugin-facebook-pixel',
+    //   options: {
+    //     pixelId: 'pixel id here',
+    //   },
+    // },
   ],
   pathPrefix: '/gp-monopoly',
 };

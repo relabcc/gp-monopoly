@@ -20,7 +20,7 @@ const Zone = ({ src, text, type, right, href, highlight, ...props }) => (
     position="relative"
     {...props}
   >
-    <Link href={href} target="_blank">
+    <Link href={href} target="_blank" data-label={text}>
       <Box pt="20%" />
       <Box
         px="5%"
