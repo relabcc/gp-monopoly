@@ -1,2 +1,0 @@
-webpackJsonp([60335399758886],{239:function(t,e){t.exports={data:{site:{siteMetadata:{title:"一網打盡 能源大地圖",description:"所有你該知道的能源大小事"},pathPrefix:"/gp-monopoly"}},layoutContext:{}}}});
-//# sourceMappingURL=path----c9a12f7acfb4b1b81c47.js.map
