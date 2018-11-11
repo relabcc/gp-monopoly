@@ -34,7 +34,7 @@ Link.defaultProps = {
   fontWeight: 'normal',
   onClick: (e) => {
     if (window.gtag) {
-      const label = get(e.target, 'dataset.label', e.target.href);
+      const label = get(e.currentTarget, 'dataset.label', e.currentTarget.href);
       window.gtag('event', 'Click', {
         'event_category': 'Outbound Links',
         'event_label': label,
